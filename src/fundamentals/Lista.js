@@ -29,7 +29,10 @@ const List = props => {
     const gerarItems = () => {
         // const items = data.map(dataItem => <ItemDaLista text={dataItem} />);
         // return items;
-        return data.map(dataItem => <ItemDaLista text={dataItem} />);
+        
+        //return data.map(dataItem => <ItemDaLista text={dataItem} />);
+        
+        return data.map(dataItem => <ItemDaLista>{dataItem}</ItemDaLista>);
     };
 
     /** O parenteses indica a separacao do codigo em varias linhas */

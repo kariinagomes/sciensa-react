@@ -7,7 +7,7 @@ import React from "react";
 
 /** Boa pratica fazer dessa forma */
 const ComponenteFuncao = () => (
-    <h1>Primeiro component maroto</h1>
+    <h6>Primeiro component maroto</h6>
 )
 
 export default ComponenteFuncao;
