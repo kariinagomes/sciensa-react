@@ -1,23 +1,27 @@
 import React from 'react';
-import logo from './logo.svg';
+/*svg: tipo de programacao leve que pode fazer animacao; é um código (não uma imagem)*/
+import logo from './logo.svg'; 
 import './App.css';
 
+/** sempre colocar ./ pq indica que é na pasta que eu estou */
+// import ComponenteFuncao from './fundamentals/ComponenteFuncao';
+// import ComponenteClasse from './fundamentals/ComponenteClasse';
+// import Multicomponentes from './fundamentals/Multicomponentes';
+
+import Lista from './fundamentals/Lista';
+
 function App() {
+
+  const data = [ "ReactJs", "VueJs", "Angular2+", "AngularJs", "EmberJs" ]
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Lista data={data} />
+        {/* <Multicomponentes /> */}
+        {/* <ComponenteFuncao />
+        <ComponenteClasse /> */}
       </header>
     </div>
   );
