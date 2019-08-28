@@ -6,8 +6,12 @@ import React from "react";
 // }
 
 /** Boa pratica fazer dessa forma */
-const ComponenteFuncao = () => (
-    <h6>Primeiro component maroto</h6>
-)
+// const ComponenteFuncao = () => (
+//     <h6>Primeiro component maroto</h6>
+// )
+
+const ComponenteFuncao = props => <h6>{props.children}</h6>
+
+//const ComponenteFuncao = props => <h6>{props.textooo}</h6>
 
 export default ComponenteFuncao;

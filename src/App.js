@@ -9,19 +9,41 @@ import './App.css';
 // import Multicomponentes from './fundamentals/Multicomponentes';
 
 import Lista from './fundamentals/Lista';
+import ComponenteFuncao from './fundamentals/ComponenteFuncao';
 
 function App() {
 
   const data = [ "ReactJs", "VueJs", "Angular2+", "AngularJs", "EmberJs" ]
 
+  const gerarListaH6 = () => {
+    return data.map(data => <ComponenteFuncao>{data}</ComponenteFuncao>)
+  }  
+
+  // const gerarListaH6 = () => 
+  //   data.map(malElemento => <ComponenteFuncao textooo={malElemento} />);
+
+  /**  
+  * const rodrigo = () => { return "funcionou" };
+  * const rodrigoPara = () => ( "funcionou" );
+  * 
+  * const programacaoFuncional = () => {
+  *   return console.log;
+  * }
+  * programacaoFuncional()("existe");
+  */
+
   return (
     <div className="App">
       <header className="App-header">
+        
+        {/* <ComponenteFuncao textooo="agora eh um teste" /> */}
+        
         <img src={logo} className="App-logo" alt="logo" />
         <Lista data={data} />
         {/* <Multicomponentes /> */}
         {/* <ComponenteFuncao />
         <ComponenteClasse /> */}
+        {gerarListaH6()}
       </header>
     </div>
   );
