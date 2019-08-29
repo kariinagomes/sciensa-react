@@ -23,6 +23,17 @@ class ComponentComEstado extends React.Component {
         };
     }
 
+    // passa aqui só para montar
+    componentDidMount() {
+        // chamadas de API eh aqui e atualiza o estado 
+        console.log("--- Passou no componentDidMount ---");
+        setTimeout(() => {
+            this.setState({
+                infoText: 'Karinaaaa'
+            })
+        }, 2000)
+    }
+
     abrir = () => {
         this.setState({height: 200, infoText: "Componente aberto" });
     };
@@ -41,17 +52,24 @@ class ComponentComEstado extends React.Component {
     // };
 
     render() {
+        console.log('TESTE RENDERIZANDO ESSE AQ COM ESTADO')
         const objectStilo = {
             width: 400, 
             height: this.state.height, 
             padding: 10, 
             color: "black",
-            backgroundColor: "lightGray"
+            backgroundColor: "lightGray",
+            overflor: "hidden"
         };
 
         return(
             <div style={{ padding: 10 }}>
-                <div style={objectStilo}>{this.state.infoText}</div>
+                <p style={{ color: "white" }}>
+                    {this.props.text}
+                </p>
+                <div style={objectStilo}>
+                    {this.state.infoText}
+                </div>
                 <button type="button" onClick={this.abrir}>Abrir</button>
                 <button type="button" onClick={() => this.fechar("karina")}>Fechar</button>
                 {/* <button type="button" onClick={this.fechar}>Fechar</button> */}
